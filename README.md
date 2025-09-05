@@ -10,17 +10,17 @@
    git add .
    git commit -m "Initial commit"
    git push -u origin main
-3. Tambahkan '.gitignore' dan 'README.md'
+3. Tambahkan `.gitignore` dan `README.md`
 
 ## 🐍 Setup Virtual Environment dan Django
 1. Buat virtual environment dan aktifkan
     ```bash
     python -m venv env
-    .\\env\\Scripts\\activate
+    .\env\Scripts\activate
 2. Install dependencies dengan `pip install -r requirements.txt`
 3. Buat project Django dan file `/env` dan `.env.prod`
 4. Sesuaikan `settings.py` (ALLOWED_HOSTS, database)
-5 Jalankan migrasi dengan `python manage.py migrate`
+5. Jalankan migrasi dengan `python manage.py migrate`
 
 ## Setup Aplikasi `main`
 1. Buat aplikasi 
@@ -36,3 +36,6 @@
 2. Import `include` di `angkringan_cyberpunk/urls.py` dan tambahkan
     ```bash
     path('', include('main.urls'))
+
+## Project siap dijalankan!
+`python manage.py runserver`

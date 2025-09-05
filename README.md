@@ -1,27 +1,38 @@
-# 🚀 Setup Project Django + GitHub
+# 🍢 Angkringan Cyberpunk
 
-Langkah-langkah awal setup project ini:
+## 🛠️ Setup Git dan GitHub
+1. Buat repo di GitHub dan folder project lokal  
+2. Inisialisasi Git:
+   ```bash
+   git init
+   git remote add origin <link>
+   git branch -M main
+   git add .
+   git commit -m "Initial commit"
+   git push -u origin main
+3. Tambahkan '.gitignore' dan 'README.md'
 
-1. Buat repo di Github  
-2. Buat folder  
-3. Setelah masuk ke dalam folder, ketik `git init` di terminal untuk initialized  
-4. Buat `README.md` untuk mencatat progress  
-5. Tambahkan `.gitignore` agar file tertentu tidak terpush ke github  
-6. Menambahkan remote ke repo Github dengan `git remote add origin link`  
-7. Ubah nama branch menjadi `main` dengan `git branch -M main`  
-8. Tambahkan semua file ke stage commit  
-9. Commit  
-10. Lalu push dengan `git push -u origin main`, yaitu agar Github tau bahwa code ini akan dipush ke remote origin dan nama branch main  
-11. Buat virtual environment untuk menyiapkan dependencies dan membuat proyek django  
-12. Lalu install dependencies yang dibutuhkan  
-13. Buat Proyek django  
-14. Buat `.env` dan `.env.prod` untuk konfigurasi environment variables dan proyek  
-15. Modifikasi `settings.py` supaya dapat menggunakan environment variables  
-16. Tambahkan `localhost` di allowed host agar dapat develop di jaringan lokal  
-17. Tambahkan konfigurasi production  
-18. Ubah konfigurasi databases  
-19. Migrate  
-20. Buat proyek di PWS
-21. Ubah environs sesuai requirement.txt
-22. Tambahkan URL deployment
-23. 
+## Setup Virtual Environment dan Django
+1. Buat virtual environment dan aktifkan
+    ```bash
+    python -m venv env
+    .\\env\\Scripts\\activate
+2. Install dependencies dengan `pip install -r requirements.txt`
+3. Buat project Django dan file `/env` dan `.env.prod`
+4. Sesuaikan `settings.py` (ALLOWED_HOSTS, database)
+5 Jalankan migrasi dengan `python manage.py migrate`
+
+## Setup Aplikasi `main`
+1. Buat aplikasi 
+    ```bash
+    python manage.py startapp main
+2. Tambahkan main ke dalam INSTALLED_APPS di settings.py
+3. Buat folder `template` di direktori main
+4. Buat file `main.html` di direktori template
+5. Tambahkan model di models.py dan jalankan migrasi
+
+## URL Routing
+1. Buat `urls.py` di app `main`
+2. Import `include` di `angkringan_cyberpunk/urls.py` dan tambahkan
+    ```bash
+    path('', include('main.urls'))

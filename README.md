@@ -21,3 +21,7 @@ Langkah-langkah awal setup project ini:
 17. Tambahkan konfigurasi production  
 18. Ubah konfigurasi databases  
 19. Migrate  
+20. Buat proyek di PWS
+21. Ubah environs sesuai requirement.txt
+22. Tambahkan URL deployment
+23. 

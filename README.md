@@ -12,7 +12,7 @@
    git push -u origin main
 3. Tambahkan '.gitignore' dan 'README.md'
 
-## Setup Virtual Environment dan Django
+## 🐍 Setup Virtual Environment dan Django
 1. Buat virtual environment dan aktifkan
     ```bash
     python -m venv env
@@ -31,7 +31,7 @@
 4. Buat file `main.html` di direktori template
 5. Tambahkan model di models.py dan jalankan migrasi
 
-## URL Routing
+## 🌐 URL Routing
 1. Buat `urls.py` di app `main`
 2. Import `include` di `angkringan_cyberpunk/urls.py` dan tambahkan
     ```bash
